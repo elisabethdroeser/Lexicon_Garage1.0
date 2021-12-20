@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lexicon_Garage1._0.Vehicle
 {
-    internal class Car
+    internal class Car : Vehicle
     {
     }
 }

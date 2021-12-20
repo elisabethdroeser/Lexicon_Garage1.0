@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lexicon_Garage1._0.Vehicles
+﻿namespace Lexicon_Garage1._0.Vehicles
 {
     internal class Vehicle
     {
@@ -20,9 +14,9 @@ namespace Lexicon_Garage1._0.Vehicles
 
         public string? Model { get; set; }
 
-        private string color;
+        private string? color;
 
-        public string Color { get; set; }
+        public string? Color { get; set; }
 
         private int numberOfWheel;
 
