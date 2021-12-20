@@ -12,14 +12,29 @@ namespace Lexicon_Garage1._0.Vehicles
 
         public int RegNo { get; set; }
 
-        public string? color;
+        public string? name;
 
-        public string? Color { get; set; }
-    
-        public Vehicle(int regNo, string color)
+        public string? Name;
+
+        private string? model;
+
+        public string? Model { get; set; }
+
+        private string color;
+
+        public string Color { get; set; }
+
+        private int numberOfWheel;
+
+        public int NumberOfWheel { get; set; }
+
+        public Vehicle(int regNo, int numberOfWheel, string name, string model, string color)
         {
-                RegNo = regNo;  
-                Color = color;  
+            RegNo = regNo;
+            NumberOfWheel = numberOfWheel;
+            Name = name;  
+            Model = model;  
+            Color = color;
         }
 
 
