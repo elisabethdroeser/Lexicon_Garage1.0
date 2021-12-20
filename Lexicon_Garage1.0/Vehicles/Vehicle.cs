@@ -31,6 +31,5 @@
             Color = color;
         }
 
-
     }
 }

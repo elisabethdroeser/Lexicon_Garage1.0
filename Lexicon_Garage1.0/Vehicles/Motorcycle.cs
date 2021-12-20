@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Lexicon_Garage1._0.Vehicles
 {
     internal class Motorcycle : Vehicle
+
     {
-        public Motorcycle(string )
+        public int CylinderVolume { get; set; }
     }
 }
