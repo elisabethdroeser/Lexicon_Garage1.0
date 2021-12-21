@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lexicon_Garage1._0.Vehicles
+namespace LexiconGarage1.Vehicles
 {
     internal class Airplane : Vehicle
     {
+        public int NumberOfSeats { get; set; }
+
+        public Airplane(int regNo, string name, string model, string color, int numberOfWheel, int numberOfSeats) : base(regNo, numberOfWheel, name, model, color)
+        {
+            NumberOfSeats = numberOfSeats;
+        }
     }
 }

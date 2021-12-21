@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lexicon_Garage1._0.Vehicles
+﻿namespace LexiconGarage1.Vehicles
 {
     internal class Motorcycle : Vehicle
-
     {
         public int CylinderVolume { get; set; }
+
+        public Motorcycle(int regNo, string name, string model, string color, int numberOfWheel, int cylinderVolume) : base(regNo, numberOfWheel, name, model, color)
+        {
+            CylinderVolume = cylinderVolume;
+        }
     }
 }

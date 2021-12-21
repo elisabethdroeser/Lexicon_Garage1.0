@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lexicon_Garage1._0.Vehicles
+namespace LexiconGarage1._0.Vehicles
 {
     internal class Bus : Vehicle
     {

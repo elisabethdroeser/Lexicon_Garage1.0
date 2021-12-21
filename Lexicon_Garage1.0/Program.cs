@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using LexiconGarage1._0;
+
+var garageManager = new GarageManager();
+//garageManager.Run();
+garageManager.PrintAllVehicles();
