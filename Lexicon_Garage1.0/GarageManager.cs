@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LexiconGarage1._0
+namespace LexiconGarage1
 {
     internal class GarageManager
     {

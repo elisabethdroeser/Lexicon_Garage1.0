@@ -14,6 +14,7 @@ namespace LexiconGarage1
         {
             vehicles = new Vehicle[size]; 
         }
+
         private Vehicle[] vehicles;
 
         //public IEnumerator<Vehicle> GetEnumerator()

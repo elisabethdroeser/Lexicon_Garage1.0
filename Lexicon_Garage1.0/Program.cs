@@ -1,5 +1,6 @@
-﻿using LexiconGarage1._0;
+﻿using LexiconGarage1;
 
-var garageManager = new GarageManager();
+    //var garageManager = new GarageManager();
 //garageManager.Run();
-garageManager.PrintAllVehicles();
+//garageManager.PrintAllVehicles();
+
