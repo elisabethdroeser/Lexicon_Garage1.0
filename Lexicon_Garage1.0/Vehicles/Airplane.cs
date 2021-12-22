@@ -10,7 +10,7 @@ namespace LexiconGarage1.Vehicles
     {
         public int NumberOfSeats { get; set; }
 
-        public Airplane(int regNo, string name, string model, string color, int numberOfWheel, int numberOfSeats) : base(regNo, numberOfWheel, name, model, color)
+        public Airplane(string regNo, string name, string model, string color, int numberOfWheel, int numberOfSeats) : base(regNo, numberOfWheel, name, model, color)
         {
             NumberOfSeats = numberOfSeats;
         }

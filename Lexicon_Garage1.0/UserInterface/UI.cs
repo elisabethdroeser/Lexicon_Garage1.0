@@ -8,7 +8,7 @@ internal class UI
         {
             Console.WriteLine("Please go through the menu by using the number \n(1, 2, 3, 0 etc)."
                 + "\n1. Check garage"
-        ) 
+        ); 
             char input = ' ';
 
             try
@@ -25,10 +25,12 @@ internal class UI
                 case '1':
                     GarageManager();
                     break;
-                case
+                case '2':
+                    GarageHandler();
+                    break;
+                 default:
+                    break;
             }
-
-
 
         }
     }

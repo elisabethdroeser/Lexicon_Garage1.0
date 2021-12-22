@@ -2,13 +2,13 @@
 {
     internal abstract class Vehicle
     {    
-        protected int RegNo { get; set; } 
+        protected string RegNo { get; set; } 
         public string? Name { get; set; }
         public string? Model { get; set; }
         public string? Color { get; set; }
         public int NumberOfWheel { get; set; }
 
-        public Vehicle(int regNo, int numberOfWheel, string name, string model, string color)
+        public Vehicle(string regNo, int numberOfWheel, string name, string model, string color)
         {
             RegNo = regNo;
             NumberOfWheel = numberOfWheel;

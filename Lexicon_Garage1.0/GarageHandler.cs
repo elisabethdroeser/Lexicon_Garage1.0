@@ -11,6 +11,9 @@ namespace LexiconGarage1
     {
         private Garage garage;
 
+        //parkera fordon - push
+        //hämta ut fordon - pop
+        //print all vehicles m egenskaper
         
         public GarageHandler(int size)
         {

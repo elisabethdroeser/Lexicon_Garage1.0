@@ -10,7 +10,7 @@ namespace LexiconGarage1.Vehicles
     {
         public string FuelType { get; set; }
 
-        public Car(int regNo, string name, string model, string color, int numberOfWheel, string fuelType) : base(regNo, numberOfWheel, name, model, color)
+        public Car(string regNo, string name, string model, string color, int numberOfWheel, string fuelType) : base(regNo, numberOfWheel, name, model, color)
         {
             FuelType = fuelType;
         }
