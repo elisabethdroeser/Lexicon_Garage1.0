@@ -22,9 +22,39 @@ namespace LexiconGarage1
         //funktioner, parkera fordon, fråga om vissa saker. input
         //vilken typ av fordon
 
+        public void Park()
+        {
+            //skriv ut instruktioner (från UI-klassen)
+            //ta emot input (regnr, fordonstyp etc)
+            //skicka info till GarageHandler.Park => Garage
+            // skriv ut att allt gått bra
+        }
+
+        public void Unpark()
+        {
+            ////skriv ut instruktioner (från UI-klassen)
+            // ta emot regnr på fordonen som man vill upark
+            // skicka info in till GarageHandler.Unpark => Garage
+            // skriv ut att allt gått bra
+        }
+
+        public void SeedData()
+        {
+            //kalla på GarageHandler.SeedData
+            //skriv ut att allt gått bra
+        }
+
+        public void Search()
+        {
+            //skriv ut instruktioner (från UI-klassen)
+            //.. 
+        }
+
         public void PrintAllVehicles()
         {
             garageHandler.PrintAllVehicles();
         }
+
+
     }
 }

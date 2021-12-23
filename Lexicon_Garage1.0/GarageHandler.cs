@@ -27,5 +27,11 @@ namespace LexiconGarage1
             //    Console.WriteLine(vehicle.Stats());
             //}
         }
+
+        public void SeedData()
+        {
+            //skapa ett gäng frodon
+            // parkjera dem
+        }
     }
 }

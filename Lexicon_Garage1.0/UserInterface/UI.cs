@@ -2,7 +2,8 @@
 
 internal class UI
 {
-    internal static void MenuManager()
+    // Program => GarageManager =>
+    internal static void Menu()
     {
         while (true)
         {
@@ -28,10 +29,16 @@ internal class UI
                 case '2':
                     GarageHandler();
                     break;
+
                  default:
                     break;
             }
 
         }
+    }
+
+    private static void GarageManager()
+    {
+        throw new NotImplementedException();
     }
 }
