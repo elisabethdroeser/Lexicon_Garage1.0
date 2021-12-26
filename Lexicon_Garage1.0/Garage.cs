@@ -12,7 +12,7 @@ namespace LexiconGarage1
     //generisk samling av fordon, begränsas av en constraint. 
 
     //internal class Garage //: IEnumerable<T> where T : IVehicle
-    public class Garage : IEnumerable
+    public class Garage //: IEnumerable
     {
         public Garage(int size)
         {

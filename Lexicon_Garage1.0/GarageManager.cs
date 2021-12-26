@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LexiconGarage1
+﻿namespace LexiconGarage1
 {
-    internal class GarageManager
+    public class GarageManager
     {
         private UI ui;
 
@@ -16,21 +10,31 @@ namespace LexiconGarage1
         {
             ui = new UI();
             garageHandler = new GarageHandler(10);
+
+            //show main metod som kallar på ui menyn
+            //funktioner, parkera fordon, fråga om vissa saker. input
+            //vilken typ av fordon
         }
-
-        //show main metod som kallar på ui menyn
-        //funktioner, parkera fordon, fråga om vissa saker. input
-        //vilken typ av fordon
-
-        public void Park()
+        private static void AddToGarage() //private static void AddToList(string value,List<string> list)
         {
-            //skriv ut instruktioner (från UI-klassen)
             //ta emot input (regnr, fordonstyp etc)
             //skicka info till GarageHandler.Park => Garage
             // skriv ut att allt gått bra
+            var list = new List<string>();
+            var input = Console.ReadLine();
+            var value = input?.Substring(1);
+
+            Console.WriteLine("Welcome to LexiGarage." +
+                    "Please fill in the following details:" +
+                    "registration number, type of vehicle, model,color, number of wheels etc. "); //skriv ut instruktioner (från UI-klassen)
+
+            list.Add(value);
+            Console.WriteLine($"\"{value}\" has been added to the list");
+
+
         }
 
-        public void Unpark()
+        static void Unpark()
         {
             ////skriv ut instruktioner (från UI-klassen)
             // ta emot regnr på fordonen som man vill upark
@@ -38,21 +42,21 @@ namespace LexiconGarage1
             // skriv ut att allt gått bra
         }
 
-        public void SeedData()
+        static void SeedData()
         {
             //kalla på GarageHandler.SeedData
             //skriv ut att allt gått bra
         }
 
-        public void Search()
+        static void Search()
         {
             //skriv ut instruktioner (från UI-klassen)
             //.. 
         }
 
-        public void PrintAllVehicles()
+        static void PrintAllVehicles()
         {
-            garageHandler.PrintAllVehicles();
+            //garageHandler.PrintAllVehicles();
         }
 
 
