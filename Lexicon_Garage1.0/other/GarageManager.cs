@@ -1,6 +1,6 @@
 ﻿namespace LexiconGarage1
 {
-    public class GarageManager
+    internal class GarageManager
     {
         private UI ui;
 
@@ -15,7 +15,7 @@
             //funktioner, parkera fordon, fråga om vissa saker. input
             //vilken typ av fordon
         }
-        private static void AddToGarage() //private static void AddToList(string value,List<string> list)
+        private static void AddToGarage(string regNo, int numberOfWheel, string name, string model, string color) //private static void AddToList(string value,List<string> list)
         {
             //ta emot input (regnr, fordonstyp etc)
             //skicka info till GarageHandler.Park => Garage
@@ -30,7 +30,6 @@
 
             list.Add(value);
             Console.WriteLine($"\"{value}\" has been added to the list");
-
 
         }
 
