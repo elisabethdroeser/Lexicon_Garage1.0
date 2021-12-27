@@ -14,5 +14,9 @@ namespace LexiconGarage.Vehicles
         {
             Length = length;
         }
+        public override string ToString()
+        {
+            return base.ToString() + $", Length:{Length}.";
+        }
     }
 }

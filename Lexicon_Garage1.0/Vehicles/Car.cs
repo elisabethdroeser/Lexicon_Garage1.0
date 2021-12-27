@@ -14,5 +14,9 @@ namespace LexiconGarage.Vehicles
         {
             FuelType = fuelType;
         }
+        public override string ToString()
+        {
+            return base.ToString() + $", FuelType:{FuelType}.";
+        }
     }
 }
