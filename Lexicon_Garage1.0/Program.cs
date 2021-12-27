@@ -1,5 +1,6 @@
 ﻿//using LexiconGarage1.Vehicles;
 using LexiconGarage1;
+using System.Collections.Generic;
 
 //var garageManager = new GarageManager();
 //garageManager.Run();
@@ -9,7 +10,7 @@ Parking();
 
  static void Parking()
 {
-    var park = new Parking();
+    var park = new Parking<string>();
     park.Push("ABC123");
     park.Push("QWE124");
     park.Push("SYNTH");
