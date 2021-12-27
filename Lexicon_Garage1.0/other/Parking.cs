@@ -1,4 +1,4 @@
-﻿//using LexiconGarage1.Vehicles;
+﻿/*using LexiconGarage1.Vehicles;
 public class Parking<T>
 {
     private readonly T[] _vehicle;
@@ -11,3 +11,4 @@ public class Parking<T>
 
     public T Pop() => _vehicle[_currentIndex--];
 }
+*/

@@ -1,31 +1,30 @@
-﻿namespace LexiconGarage1;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using LexiconGarage.Vehicles;
 
-internal class UI
+namespace LexiconGarage1;
+
+public class UI
 {
     // Program => GarageManager =>
-    internal static void Menu()
+    static void Menu()
     {
-        do
-        {
-            Console.WriteLine("Welcome to LexiGarage");
-            Console.WriteLine("Use the below numbers to do what you want. ");
-            Console.WriteLine("Create a garage");
-            Console.WriteLine("Add a new vehicle to the garage");
-            Console.WriteLine("Remove a vehicle from the garage"); 
-            Console.WriteLine("Print a list of vehicles in the garage");
-            Console.WriteLine("Search for types, models etc in the garage");
-            Console.WriteLine("* 0: Exit the program:");
-            } 
-        while (true);
-        }
-        /*
         while (true)
-        {
-            Console.WriteLine("Please go through the menu by using the number \n(1, 2, 3, 0 etc)."
-                + "\n1. Check garage"
-        ); 
-            char input = ' ';
+        { 
+            Console.WriteLine("Welcome to LexiGarage");
+            Console.WriteLine("Use the below numbers to do what you want.");
+            Console.WriteLine("\n1. Create a garage");
+            Console.WriteLine("\n2. Add a new vehicle to the garage");
+            Console.WriteLine("\n3. Remove a vehicle from the garage");
+            Console.WriteLine("\n4. Print a list of vehicles in the garage");
+            Console.WriteLine("\n5. Search for types, models etc in the garage");
+            Console.WriteLine("\n0. Exit the program:");
 
+            char input = ' ';
             try
             {
                 input = Console.ReadLine()![0];
@@ -33,27 +32,34 @@ internal class UI
             catch (IndexOutOfRangeException)
             {
                 Console.Clear();
-                Console.WriteLine("Please enter some input");
+                Console.WriteLine("Please enter input");
             }
             switch (input)
             {
                 case '1':
-                    GarageManager();
+                    CreateGarage();
                     break;
                 case '2':
-                    //GarageHandler();
+                    Park();
                     break;
-
-                 default:
+                case '3':
+                    UnPark();
                     break;
-            }
-
+                case '4':
+                    PrintAllVehicles();
+                    break;
+                case '5':
+                    FindByRegNo();
+                    break;
+                case '0';
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Please enter the valid numbers 1, 2, 3, 4, 5 or 0");
+                    break;
+            }   
         }
     }
-        */
 
-        private static void GarageManager()
-    {
-        throw new NotImplementedException();
-    }
+
 }
