@@ -3,10 +3,9 @@ using LexiconGarage1.Vehicles;
 using System.Collections.Generic;
 
 namespace LexiconGarage1;
-
-internal class ParkingManager <T>
+public class ParkingManager <T>
 {
-    private UI ui;
+    //private UI ui;
 
     //private GarageHandler garageHandler;
 

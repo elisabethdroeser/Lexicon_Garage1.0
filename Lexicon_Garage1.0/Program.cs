@@ -2,7 +2,7 @@
 using LexiconGarage1;
 using LexiconGarage1.Vehicles;
 using System.Collections.Generic;
-using static LexiconGarage1.ParkingManager<T>; //TODO:varför får jag detta felmeddelande?
+//using static LexiconGarage1.ParkingManager<T>; //TODO:varför får jag detta felmeddelande?
 
 
 //var garageManager = new GarageManager();
@@ -10,11 +10,11 @@ using static LexiconGarage1.ParkingManager<T>; //TODO:varför får jag detta fel
 //garageManager.PrintAllVehicles();
 
 
-var parkingManager = new ParkingHandler<Vehicle>();
-parkingManager.Add(new Vehicle("ABC123", 4, "Ford", "Fiesta", "red"));
-parkingManager.Save();
+//var parkingManager = new ParkingHandler<Vehicle>();
+//parkingManager.Add(new Vehicle("ABC123", 4, "Ford", "Fiesta", "red"));
+//parkingManager.Save();
 
-Console.ReadLine();
+
 
 /* 
 Parking();
@@ -41,3 +41,8 @@ park.Push("SYNTH", 4, "Ford", "Fiesta", "red");
 
 
 //string regNo, int numberOfWheel, string name, string model, string color)
+
+
+var gh = new GarageHandler(5);
+gh.SeedData();
+gh.PrintAllVehicles();

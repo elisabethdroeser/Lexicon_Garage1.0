@@ -12,28 +12,56 @@ namespace LexiconGarage1
     //generisk samling av fordon, begränsas av en constraint. 
 
     //internal class Garage //: IEnumerable<T> where T : IVehicle
-    public class Garage //: IEnumerable
+    public class Garage<Vehicle> : IEnumerable<Vehicle>
     {
+        private Vehicle[] vehicles;
         public Garage(int size)
         {
             vehicles = new Vehicle[size];
         }
 
+        public bool Park(Vehicle vehicle)
+        {
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] == null)
+                {
+                    vehicles[i] = vehicle;
+                    return true;
+                }
+            }
+            return false;
+        }
 
-        private Vehicle[] vehicles;
+        public bool UnPark(string regno)
+        {
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                //if (vehicles[i])
+                //{
 
-        // public Garagee[] vehicles)
-        //    {
-        //
-        //    }
-        //public IEnumerator<Vehicle> GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
+                //}
+            }
+            return false;
+        }
 
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        // denna bestämmer vad som händer när vi gör en foreach över en instans av Garage<Vehicle>
+        public IEnumerator<Vehicle> GetEnumerator()
+        {
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] != null)
+                {
+                    yield return vehicles[i];
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+
     }
 }
