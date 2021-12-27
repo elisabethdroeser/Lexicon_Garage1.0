@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace LexiconGarage1;
 
-internal class ParkingManager
+internal class ParkingManager <T>
 {
     private UI ui;
 
     //private GarageHandler garageHandler;
 
-    private readonly List<Vehicle> _vehicles = new();
-    public void Add(Vehicle vehicle)
+    protected readonly List<T> _vehicles = new();
+    public void Add(T vehicle)
     {
         _vehicles.Add(vehicle);
     }
@@ -21,6 +21,14 @@ internal class ParkingManager
         foreach (var vehicle in _vehicles)
         {
             Console.WriteLine(vehicle);
+        }
+    }
+
+    public class ParkingHandler<T> : ParkingManager<T>
+    {
+        public void Remove(T vehicle)
+        {
+            _vehicles.Remove(vehicle);
         }
     }
 

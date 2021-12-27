@@ -1,6 +1,6 @@
 ﻿namespace LexiconGarage1.Vehicles;
 
-internal abstract class Vehicle
+public class Vehicle
 {
     public string RegNo { get; set; }
     public string Name { get; set; }
@@ -8,7 +8,7 @@ internal abstract class Vehicle
     public string Color { get; set; }
     public int NumberOfWheel { get; set; }
 
-    public override string ToString() => $"RegNo: {RegNo}, Name: {Name}"; 
+    public override string ToString() => $"RegNo: {RegNo}, Number of wheels: {NumberOfWheel}, Name: {Name}, Model: {Model}, Color: {Color}"; 
 
     public Vehicle(string regNo, int numberOfWheel, string name, string model, string color)
     {
