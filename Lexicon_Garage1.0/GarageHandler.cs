@@ -12,7 +12,6 @@ namespace LexiconGarage
     {
         private Garage<Vehicle> garage;
 
-
         //print all vehicles m egenskaper
         
         public GarageHandler(int size)
@@ -39,7 +38,7 @@ namespace LexiconGarage
 
         public void Park()
         {
-            // få input för att skapa ett nytt foirdon
+            // få input för att skapa ett nytt fordon
             // kalla på garage.Park();
         }
 

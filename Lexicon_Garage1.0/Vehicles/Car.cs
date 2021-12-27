@@ -16,7 +16,7 @@ namespace LexiconGarage.Vehicles
         }
         public override string ToString()
         {
-            return base.ToString() + $", FuelType:{FuelType}.";
+            return base.ToString() + $", FuelType: {FuelType}.";
         }
     }
 }

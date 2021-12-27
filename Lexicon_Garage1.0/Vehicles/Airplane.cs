@@ -17,7 +17,7 @@ namespace LexiconGarage.Vehicles
 
         public override string ToString()
         {
-            return base.ToString() + $", Number of Seats:{NumberOfSeats}.";
+            return base.ToString() + $", Number of Seats: {NumberOfSeats}.";
         }
     }
 }

@@ -10,6 +10,6 @@ internal class Motorcycle : Vehicle
     }
     public override string ToString()
     {
-        return base.ToString() + $", Cylinder volume:{CylinderVolume}.";
+        return base.ToString() + $", Cylinder volume: {CylinderVolume}.";
     }
 }

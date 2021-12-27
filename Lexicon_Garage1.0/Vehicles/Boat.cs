@@ -18,7 +18,7 @@ namespace LexiconGarage.Vehicles
 
         public override string ToString()
         {
-            return base.ToString() + $", Number of Engines:{NumberOfEngines}.";
+            return base.ToString() + $", Number of Engines: {NumberOfEngines}.";
         }
     }
 }

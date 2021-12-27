@@ -8,10 +8,6 @@ using LexiconGarage.Vehicles;
 
 namespace LexiconGarage
 {
-    //Garaget: En representation av själva byggnaden. Garaget är en plats där en mängd av fordon kan förvaras.Garaget kan alltså representeras som en samling av fordon.
-    //generisk samling av fordon, begränsas av en constraint. 
-
-    //internal class Garage //: IEnumerable<T> where T : IVehicle
     public class Garage<T> : IEnumerable<T> where T : Vehicle
     {
         private T[] vehicles;
@@ -62,7 +58,5 @@ namespace LexiconGarage
         {
             return GetEnumerator();
         }
-
-
     }
 }
