@@ -1,6 +1,6 @@
 ﻿
 
-namespace LexiconGarage1.Vehicles
+namespace LexiconGarage.Vehicles
 {
     public abstract class Vehicle
     {

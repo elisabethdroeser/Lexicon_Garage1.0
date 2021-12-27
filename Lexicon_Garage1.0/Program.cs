@@ -1,6 +1,6 @@
 ﻿//using LexiconGarage1.Vehicles;
-using LexiconGarage1;
-using LexiconGarage1.Vehicles;
+using LexiconGarage;
+using LexiconGarage.Vehicles;
 using System.Collections.Generic;
 //using static LexiconGarage1.ParkingManager<T>; //TODO:varför får jag detta felmeddelande?
 

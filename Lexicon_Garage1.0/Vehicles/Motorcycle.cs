@@ -1,4 +1,4 @@
-﻿namespace LexiconGarage1.Vehicles;
+﻿namespace LexiconGarage.Vehicles;
 
 internal class Motorcycle : Vehicle
 {

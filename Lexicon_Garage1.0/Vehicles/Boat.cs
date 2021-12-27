@@ -1,11 +1,11 @@
-﻿using LexiconGarage1.Vehicles;
+﻿using LexiconGarage.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LexiconGarage1.Vehicles
+namespace LexiconGarage.Vehicles
 {
     internal class Boat : Vehicle
     {
