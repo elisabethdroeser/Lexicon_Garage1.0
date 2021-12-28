@@ -15,7 +15,7 @@ namespace LexiconGarage
                 Console.WriteLine("Welcome to LexiGarage");
                 Console.WriteLine("Use the below numbers to do what you want.");
                 Console.WriteLine("\n1. Create a garage");
-                Console.WriteLine("\n2. Add a new vehicle to the garage");
+                Console.WriteLine("\n2. Park your vehicle to the garage");
                 Console.WriteLine("\n3. Remove a vehicle from the garage");
                 Console.WriteLine("\n4. Print a list of vehicles in the garage");
                 Console.WriteLine("\n5. Search for types, models etc in the garage");
@@ -73,9 +73,38 @@ namespace LexiconGarage
             Console.WriteLine("Unpark");
         }
 
-        private static void Park()
+        static void Park()
         {
-            Console.WriteLine("Parkvehicle");
+            var list = new List<string>();
+            bool finish = false;
+            Console.Clear();
+
+            Console.WriteLine("Welcome to LexiGarage!" +
+                "\n Park your vehicle to the garage" +
+                "\n Please enter details to park your vehicle" +
+                "\n '1': Registration number" +
+                "\n '2': Number of wheels" +
+                "\n '3': Type of vehicle" +
+                "\n '4': Model" +
+                "\n '5': Color" +
+                "\n '0': Exit back to main menu");  
+
+            do
+            {
+                var input = Console.ReadLine();
+                var nav = input[0];
+                var value = input.Substring(1);
+                
+                switch (nav)
+                {
+                    case '1':
+                        Console.WriteLine("Hej");
+                        break;
+
+
+                }
+
+            } while (!finish);
         }
 
         private static void CreateGarage()
