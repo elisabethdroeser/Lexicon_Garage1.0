@@ -5,7 +5,7 @@ namespace LexiconGarage
     public class GarageManager
     {
         static IUI ui = new ConsoleUI();
-        public static void MainMenu()
+        public void ShowMenu()
         {
             ui.PrintString("Welcome to LexiGarage");
             ui.PrintString("Use the below numbers to do what you want.");
@@ -14,10 +14,11 @@ namespace LexiconGarage
             ui.PrintString("\n3. Remove a vehicle from the garage");
             ui.PrintString("\n4. Print a list of vehicles in the garage");
             ui.PrintString("\n5. Search for types, models etc in the garage");
-            ui.PrintString("\n0. Exit the program");
+            ui.PrintString("\n0. Exit the menu");
+           ;
         }
 
-        
+
         /*
                 char input = ' ';
                 try
@@ -104,10 +105,11 @@ namespace LexiconGarage
 
             } while (!finish);
         }
-        */
+        
         private static void CreateGarage()
         {
             Console.WriteLine("creategarage");
         }
+        */
     }
 }

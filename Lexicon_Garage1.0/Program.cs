@@ -3,7 +3,7 @@ using LexiconGarage.Vehicles;
 using System.Collections.Generic;
 
 var garageManager = new GarageManager();
-garageManager.MainMenu();
+garageManager.ShowMenu();
 //garageManager.PrintAllVehicles();
 
 
