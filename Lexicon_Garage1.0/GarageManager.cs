@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace LexiconGarage
 {
     public class GarageManager
     {
-        public void Menu()
+        static IUI ui = new ConsoleUI();
+        public static void MainMenu()
         {
-            while (true)
-            {
-                Console.WriteLine("Welcome to LexiGarage");
-                Console.WriteLine("Use the below numbers to do what you want.");
-                Console.WriteLine("\n1. Create a garage");
-                Console.WriteLine("\n2. Park your vehicle to the garage");
-                Console.WriteLine("\n3. Remove a vehicle from the garage");
-                Console.WriteLine("\n4. Print a list of vehicles in the garage");
-                Console.WriteLine("\n5. Search for types, models etc in the garage");
-                Console.WriteLine("\n0. Exit the program");
+            ui.PrintString("Welcome to LexiGarage");
+            ui.PrintString("Use the below numbers to do what you want.");
+            ui.PrintString("\n1. Create a garage");
+            ui.PrintString("\n2. Park your vehicle to the garage");
+            ui.PrintString("\n3. Remove a vehicle from the garage");
+            ui.PrintString("\n4. Print a list of vehicles in the garage");
+            ui.PrintString("\n5. Search for types, models etc in the garage");
+            ui.PrintString("\n0. Exit the program");
+        }
 
+        
+        /*
                 char input = ' ';
                 try
                 {
@@ -73,7 +71,7 @@ namespace LexiconGarage
             Console.WriteLine("Unpark");
         }
 
-        static void Park()
+        /*static void Park()
         {
             var list = new List<string>();
             bool finish = false;
@@ -106,7 +104,7 @@ namespace LexiconGarage
 
             } while (!finish);
         }
-
+        */
         private static void CreateGarage()
         {
             Console.WriteLine("creategarage");

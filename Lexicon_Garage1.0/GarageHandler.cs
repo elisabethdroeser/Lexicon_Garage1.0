@@ -1,10 +1,5 @@
 ﻿using LexiconGarage.Vehicles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 
 namespace LexiconGarage
 {
@@ -36,11 +31,40 @@ namespace LexiconGarage
             garage.UnPark("BUS111");
         }
 
-        public void Park()
+        static void Park()
         {
             // få input för att skapa ett nytt fordon
             // kalla på garage.Park();
-        }
+            var list = new List<string>();
+            bool finish = false;
+            Console.Clear();
+
+            Console.WriteLine("Welcome to LexiGarage!" +
+                "\n Park your vehicle to the garage" +
+                "\n Please enter details to park your vehicle" +
+                "\n '1': Registration number" +
+                "\n '2': Number of wheels" +
+                "\n '3': Type of vehicle" +
+                "\n '4': Model" +
+                "\n '5': Color" +
+                 "\n '0': Exit back to main menu");
+
+                do
+                {
+                    var input = Console.ReadLine();
+                    var nav = input[0];
+                    var value = input.Substring(1);
+
+                    switch (nav)
+                    {
+                        case '1':
+                            Console.WriteLine("Hej");
+                            break;
+                    }
+
+                } while (!finish);
+            }
+ 
 
         public void UnPark()
         {
