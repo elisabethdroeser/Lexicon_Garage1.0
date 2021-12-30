@@ -8,7 +8,7 @@ namespace LexiconGarage
 
         public GarageHandler()
         {
-            
+
         }
 
         public void PrintAllVehicles()
@@ -45,12 +45,17 @@ namespace LexiconGarage
         {
             // få input för att skapa ett nytt fordon
             var type = "";
+            bool finish = false;
+            Console.Clear();
+
             // Fråga om typ
             Console.WriteLine("Choose Vehicle type:" +
                 "\n 1. Car" +
                 "\n 2. Airplane" +
-                "\n 3. ...");
-            
+                "\n 3. Boat" +
+                "\n 4. Bus" +
+                "\n 5. Motorcycle");
+
             var nav = Console.ReadLine();
 
             switch (nav)
@@ -61,12 +66,22 @@ namespace LexiconGarage
                 case "2":
                     type = "Airplane";
                     break;
+                case "3":
+                    type = "Boat";
+                    break;
+                case "4":
+                    type = "Bus";
+                    break;
+                case "5":
+                    type = "Motorcycle";
+                    break;
                 default:
+                    Console.WriteLine("Please press either 1-5 depending on what you want to do");     
                     break;
             }
 
             Console.WriteLine("Enter licence number: ");
-            var regnr = Console.ReadLine();
+            var regNo = Console.ReadLine();
 
             Console.WriteLine("Enter name: ");
             var name = Console.ReadLine();
@@ -77,15 +92,15 @@ namespace LexiconGarage
             Console.WriteLine("Enter model: ");
             var model = Console.ReadLine();
 
-            Console.WriteLine("Enter number of wheels: ");
-            var nrofwheels = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter number of wheels (only numbers):");
+            var nrOfwheel = Int32.Parse(Console.ReadLine());
 
             switch (type)
             {
                 case "Car":
-                    Console.WriteLine("Enter fueltype");
-                    var fueltype = Console.ReadLine();
-                    if (garage.Park(new Car(regnr, name, model, color, nrofwheels, fueltype)))
+                    Console.WriteLine("Enter fueltype:");
+                    var fuelType = Console.ReadLine();
+                    if (garage.Park(new Car(regNo, name, model, color, nrOfwheel, fuelType)))
                     {
                         Console.WriteLine("Car successfully parked");
                     }
@@ -93,18 +108,48 @@ namespace LexiconGarage
                     {
                         Console.WriteLine("Car not successfully parked!");
                     }
-                    
-                    
                     break;
                 case "Airplane":
-                    Console.WriteLine("Enter number of seats");
-                    var nrofseats = Console.ReadLine();
+                    Console.WriteLine("Enter number of seats; ");
+                    var nrOfSeats = Int32.Parse(Console.ReadLine());
+                    if (garage.Park(new Airplane(regNo, name, model, color, nrOfwheel, nrOfSeats)))
+                    {
+                        Console.WriteLine("Airplane successfully parked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Airplane not successfully parked!");
+                    }
+                    break;
+                case "Boat":
+                    Console.WriteLine("Enter number of engines; ");
+                    var nrOfEngines = Int32.Parse(Console.ReadLine());
+                    if (garage.Park(new Boat(regNo, name, model, color, nrOfwheel, nrOfEngines)))
+                    {
+                        Console.WriteLine("Boat successfully parked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Boat not successfully parked!");
+                    }
+                    break;
+                case "Motorcycle":
+                    Console.WriteLine("Enter number of engines; ");
+                    var cylinderVolume = Int32.Parse(Console.ReadLine());
+                    if (garage.Park(new Motorcycle(regNo, name, model, color, nrOfwheel, cylinderVolume)))
+                    {
+                        Console.WriteLine("Motorcycle successfully parked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Motorcycle not successfully parked!");
+                    }
                     break;
                 default:
                     break;
             }
 
-
+            while (!finish) ;
 
         }
         public void CreateGarage()
