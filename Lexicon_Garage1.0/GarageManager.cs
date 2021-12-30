@@ -5,6 +5,8 @@ namespace LexiconGarage
 {
     public class GarageManager
     {
+
+        private GarageHandler handler = new();
         public void Menu()
         {
             while (true)
@@ -31,19 +33,19 @@ namespace LexiconGarage
                 switch (input)
                 {
                     case '1':
-                        GarageHandler.CreateGarage();
+                        handler.CreateGarage();
                         break;
                     case '2':
-                        GarageHandler.Park();
+                        handler.Park();
                         break;
                     case '3':
-                        GarageHandler.UnPark();
+                        handler.UnPark();
                         break;
                     case '4':
-                        GarageHandler.PrintAllVehicles();
+                        handler.PrintAllVehicles();
                         break;
                     case '5':
-                        GarageHandler.FindByRegNo();
+                        handler.FindByRegNo();
                         break;
                     case '0':
                         Environment.Exit(0);

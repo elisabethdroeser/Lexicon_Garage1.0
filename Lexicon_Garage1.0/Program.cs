@@ -7,6 +7,6 @@ garageManager.Menu();
 //garageManager.PrintAllVehicles();
 
 
-var gh = new GarageHandler(5);
+var gh = new GarageHandler();
 gh.SeedData();
 gh.PrintAllVehicles();

@@ -4,13 +4,11 @@ namespace LexiconGarage
 {
     public class GarageHandler
     {
-        private Garage<Vehicle> garage;
+        private Garage<Vehicle> garage; //print all vehicles m egenskaper
 
-        //print all vehicles m egenskaper
-
-        public GarageHandler(int size)
+        public GarageHandler()
         {
-            garage = new Garage<Vehicle>(size);
+            
         }
 
         public void PrintAllVehicles()
@@ -37,7 +35,7 @@ namespace LexiconGarage
         }
 
 
-        private static void UnPark()
+        public void UnPark()
         {
             // få input för vilket regnr vi vill ta bort
             // kalla på garage.Unpark();
@@ -46,39 +44,74 @@ namespace LexiconGarage
         public void Park()
         {
             // få input för att skapa ett nytt fordon
-            // kalla på garage.Park();
-            var list = new List<string>();
-            bool finish = false;
-            Console.Clear();
+            var type = "";
+            // Fråga om typ
+            Console.WriteLine("Choose Vehicle type:" +
+                "\n 1. Car" +
+                "\n 2. Airplane" +
+                "\n 3. ...");
+            
+            var nav = Console.ReadLine();
 
-            Console.WriteLine("Welcome to LexiGarage!" +
-                "\n Park your vehicle to the garage" +
-                "\n Please enter details to park your vehicle" +
-                "\n '1': Registration number" +
-                "\n '2': Number of wheels" +
-                "\n '3': Type of vehicle" +
-                "\n '4': Model" +
-                "\n '5': Color" +
-                 "\n '0': Exit back to main menu");
-
-            do
+            switch (nav)
             {
-                var input = Console.ReadLine();
-                var nav = input[0];
-                var value = input.Substring(1);
+                case "1":
+                    type = "Car";
+                    break;
+                case "2":
+                    type = "Airplane";
+                    break;
+                default:
+                    break;
+            }
 
-                switch (nav)
-                {
-                    case '1':
-                        Console.WriteLine("");
-                        break;
-                }
+            Console.WriteLine("Enter licence number: ");
+            var regnr = Console.ReadLine();
 
-            } while (!finish);
+            Console.WriteLine("Enter name: ");
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Enter color: ");
+            var color = Console.ReadLine();
+
+            Console.WriteLine("Enter model: ");
+            var model = Console.ReadLine();
+
+            Console.WriteLine("Enter number of wheels: ");
+            var nrofwheels = Int32.Parse(Console.ReadLine());
+
+            switch (type)
+            {
+                case "Car":
+                    Console.WriteLine("Enter fueltype");
+                    var fueltype = Console.ReadLine();
+                    if (garage.Park(new Car(regnr, name, model, color, nrofwheels, fueltype)))
+                    {
+                        Console.WriteLine("Car successfully parked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Car not successfully parked!");
+                    }
+                    
+                    
+                    break;
+                case "Airplane":
+                    Console.WriteLine("Enter number of seats");
+                    var nrofseats = Console.ReadLine();
+                    break;
+                default:
+                    break;
+            }
+
+
+
         }
-        private static void CreateGarage()
+        public void CreateGarage()
         {
-            throw new NotImplementedException();
+            // todo, få input från användaren
+            var size = 10;
+            garage = new Garage<Vehicle>(size);
         }
 
     }
