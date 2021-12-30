@@ -1,5 +1,4 @@
 ﻿using LexiconGarage.Vehicles;
-using System.Text;
 
 namespace LexiconGarage
 {
@@ -8,13 +7,13 @@ namespace LexiconGarage
         private Garage<Vehicle> garage;
 
         //print all vehicles m egenskaper
-        
+
         public GarageHandler(int size)
         {
             garage = new Garage<Vehicle>(size);
         }
 
-        internal void PrintAllVehicles()
+        public void PrintAllVehicles()
         {
             foreach (var vehicle in garage)
             {
@@ -31,7 +30,20 @@ namespace LexiconGarage
             garage.UnPark("BUS111");
         }
 
-        static void Park()
+        public void FindByRegNo()
+        {
+            // få input för vilket regno vi vill skriva ut info om
+            // använd foreach (var vehicle in garage){ vehicle.RegNo osv osv }
+        }
+
+
+        private static void UnPark()
+        {
+            // få input för vilket regnr vi vill ta bort
+            // kalla på garage.Unpark();
+        }
+
+        public void Park()
         {
             // få input för att skapa ett nytt fordon
             // kalla på garage.Park();
@@ -49,33 +61,25 @@ namespace LexiconGarage
                 "\n '5': Color" +
                  "\n '0': Exit back to main menu");
 
-                do
+            do
+            {
+                var input = Console.ReadLine();
+                var nav = input[0];
+                var value = input.Substring(1);
+
+                switch (nav)
                 {
-                    var input = Console.ReadLine();
-                    var nav = input[0];
-                    var value = input.Substring(1);
+                    case '1':
+                        Console.WriteLine("");
+                        break;
+                }
 
-                    switch (nav)
-                    {
-                        case '1':
-                            Console.WriteLine("Hej");
-                            break;
-                    }
-
-                } while (!finish);
-            }
- 
-
-        public void UnPark()
+            } while (!finish);
+        }
+        private static void CreateGarage()
         {
-            // få input för vilket regnr vi vill ta bort
-            // kalla på garage.Unpark();
+            throw new NotImplementedException();
         }
 
-        public void FindByRegNo()
-        {
-            // få input för vilket regno vi vill skriva ut info om
-            // använd foreach (var vehicle in garage){ vehicle.RegNo osv osv }
-        }
     }
 }
