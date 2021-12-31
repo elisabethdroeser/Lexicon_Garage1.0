@@ -54,7 +54,8 @@ namespace LexiconGarage
                 "\n 2. Airplane" +
                 "\n 3. Boat" +
                 "\n 4. Bus" +
-                "\n 5. Motorcycle");
+                "\n 5. Motorcycle" +
+                "\n 0. Exit");
 
             var nav = Console.ReadLine();
 
@@ -74,6 +75,9 @@ namespace LexiconGarage
                     break;
                 case "5":
                     type = "Motorcycle";
+                    break;
+                case "0":
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Please press either 1-5 depending on what you want to do");     
@@ -147,15 +151,15 @@ namespace LexiconGarage
                     break;
                 default:
                     break;
-            }
-
-            while (!finish) ;
-
-        }
+            } 
+       }  
         public void CreateGarage()
         {
             // todo, få input från användaren
-            var size = 10;
+            Console.WriteLine("How large shall your garage be?");
+            var input = Console.ReadLine();
+            var size = input.Length;
+            //var size = 10;
             garage = new Garage<Vehicle>(size);
         }
 
